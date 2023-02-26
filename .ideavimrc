@@ -1,0 +1,62 @@
+set nu
+set relativenumber
+set highlight to 1000 ms
+set incsearch
+set scrolloff=8
+set NERDTree
+
+" Remaps
+let mapleader = " "
+noremap <Space> <Nop>
+
+" Tabswitch
+nnoremap <S-l> gt
+vnoremap <S-l> gt
+nnoremap <S-h> gT
+vnoremap <S-h> gT
+" Clipboard buffer set as default
+nnoremap  d "*d
+nnoremap  dd "*dd
+nnoremap  y "*y
+nnoremap  yy "*yy
+nnoremap  Y "*y$
+nnoremap  p "*p
+nnoremap  P "*P
+vnoremap d "*d
+vnoremap dd "*dd
+vnoremap y "*y
+vnoremap yy "*yy
+vnoremap Y "*y$
+vnoremap p "*p
+vnoremap P "*P
+
+" Digg in the pig
+nnoremap <leader>s "ayiw :%s/\<<C-r>a\>/<C-r>a/gI<Left><Left><Left>
+nnoremap <leader>r :action RenameElement 
+nnoremap <leader>f :action ReformatCode 
+" Documentation
+nnoremap <C-k> :action QuickJavaDoc<CR>
+" Navigation
+nnoremap <leader>p :action GotoFile<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <C-p> :NERDTreeFind<CR>
+nnoremap <C-d> <C-d>zz
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
+nnoremap <C-u> <C-u>zz
+" Code completion
+inoremap <C-y> :action EditorChooseLookupItem<CR>
+" Goto
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gy :action GotoTypeDeclaration<CR>
+nnoremap gD :action GotoImplementation<CR>
+nnoremap g[ :action Back<CR>
+nnoremap g] :action Forward<CR>
+" Debugging
+nnoremap <leader>de :action Debug<CR>
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <leader>dj :action StepOver<CR>
+" nnoremap <leader>dk :action StepBack<CR>
+nnoremap <leader>dl :action StepInto<CR>
+nnoremap <leader>dh :action StepOut<CR>
+
