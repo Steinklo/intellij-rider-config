@@ -60,8 +60,9 @@ nnoremap <C-u> <C-u>zz
 inoremap <C-y> :action EditorChooseLookupItem<CR>
 
 " Goto
+nnoremap gu :action ShowUsages<CR>
 nnoremap gc :action GotoClass<CR>
-nnoremap gi :action GotoImplementation<CR>
+nnoremap gi :action ReSharperGotoImplementation<CR>
 nnoremap gd :action GotToDeclaration<CR>
 nnoremap gs :action GotToSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
@@ -72,8 +73,8 @@ nnoremap g] :action GotoNextError<CR>
 " Debugging
 nnoremap <leader>d :action Debug<CR>
 nnoremap <leader>b :action ToggleLineBreakpoint<CR>
-nnoremap <leader>c :action StepOver<CR>
 nnoremap <leader>n :action Resume<CR>
-" nnoremap <leader>dk :action StepBack<CR>
+nnoremap <leader>j :action StepOver<CR>
+nnoremap <leader>k :action StepBack<CR>
+nnoremap <leader>h :action StepOut<CR>
 nnoremap <leader>l :action StepInto<CR>
-nnoremap <leader>v :action StepOut<CR>
