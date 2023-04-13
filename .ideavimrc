@@ -12,15 +12,18 @@ set NERDTree
 let mapleader = " "
 noremap <Space> <Nop>
 
-" Tabswitch
+" Tabbing
 nnoremap <S-l> gt
 vnoremap <S-l> gt
 nnoremap <S-h> gT
 vnoremap <S-h> gT
+nnoremap <leader>t :tabo<CR>
+nnoremap <leader>q :wq<CR>
 
 " Clipboard buffer set as default
 nnoremap  d "*d
 nnoremap  dd "*dd
+nnoremap D "*d$
 nnoremap  y "*y
 nnoremap  yy "*yy
 nnoremap  Y "*y$
@@ -28,6 +31,7 @@ nnoremap  p "*p
 nnoremap  P "*P
 vnoremap d "*d
 vnoremap dd "*dd
+vnoremap D "*d$
 vnoremap y "*y
 vnoremap yy "*yy
 vnoremap Y "*y$
@@ -36,7 +40,6 @@ vnoremap P "*P
 
 " Terminal
 nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
 
 " Digg in the pig
 nnoremap <leader>s "ayiw :%s/\<<C-r>a\>/<C-r>a/gI<Left><Left><Left>
@@ -44,17 +47,20 @@ nnoremap <leader>r :action RenameElement<CR>
 nnoremap <leader>= :action ReformatCode<CR>
 
 " Documentation
-nnoremap <C-k> :action QuickJavaDoc<CR>
+nnoremap K :action QuickJavaDoc<CR>
 
 " Navigation
 nnoremap <leader>p :action GotoFile<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <C-e> :action RecentFiles<CR>
-nnoremap <C-p> :NERDTreeFind<CR>
 nnoremap <C-d> <C-d>zz
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
 nnoremap <C-u> <C-u>zz
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
 
 " Code completion
 inoremap <C-y> :action EditorChooseLookupItem<CR>
