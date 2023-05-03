@@ -19,8 +19,8 @@ nnoremap <S-h> gT
 vnoremap <S-h> gT
 nnoremap <leader>q :wq<CR>
 vnoremap <leader>q :wq<CR>
-nnoremap <leader>t :tabo<CR>
-vnoremap <leader>t :tabo<CR>
+nnoremap <leader>/ :action CommentByLineComment<CR>
+vnoremap <leader>/ :action CommentByLineComment<CR>
 
 " Clipboard buffer set as default
 nnoremap d "*d
@@ -47,6 +47,7 @@ nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>s "ayiw :%s/\<<C-r>a\>/<C-r>a/gI<Left><Left><Left>
 nnoremap <leader>r :action RenameElement<CR>
 nnoremap <leader>= :action ReformatCode<CR>
+
 
 " Documentation
 nnoremap <C-k> :action QuickJavaDoc<CR>
