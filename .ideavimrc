@@ -22,23 +22,17 @@ vnoremap <leader>q :wq<CR>
 nnoremap <leader>/ :action CommentByLineComment<CR>
 vnoremap <leader>/ :action CommentByLineComment<CR>
 
-" Clipboard buffer set as default
-nnoremap d "*d
-nnoremap D "*d$
-nnoremap dd "*dd
-nnoremap y "*y
-nnoremap yy "*yy
-nnoremap Y "*y$
-nnoremap p "*p
-nnoremap P "*P
-vnoremap d "*d
-vnoremap D "*d$
-vnoremap dd "*dd
-vnoremap y "*y
-vnoremap yy "*yy
-vnoremap Y "*y$
-vnoremap p "*p
-vnoremap P "*P
+" Clipboard buffer remaps
+nnoremap <leader>d "*d
+nnoremap <leader>D "*dd
+nnoremap <leader>y "*y
+nnoremap <leader>Y "*yy
+nnoremap <leader>p "*p
+vnoremap <leader>d "*d
+vnoremap <leader>D "*dd
+vnoremap <leader>y "*y
+vnoremap <leader>Y "*yy
+vnoremap <leader>p "*p
 
 " Terminal
 nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
@@ -82,4 +76,3 @@ nnoremap <leader>n :action Resume<CR>
 nnoremap <leader>j :action StepOver<CR>
 nnoremap <leader>k :action StepBack<CR>
 nnoremap <leader>h :action StepOut<CR>
-nnoremap <leader>l :action StepInto<CR>
