@@ -64,21 +64,21 @@ nnoremap <C-k> :action QuickJavaDoc<CR>
 " Navigation
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <leader>fr :action RecentFiles<CR>
-nnoremap <leader>fg :action GotoFile<CR>
-nnoremap <leader>fi :action FindInPath<CR>
-nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fr m`:action RecentFiles<CR>
+nnoremap <leader>fg m`:action GotoFile<CR>
+nnoremap <leader>fi m`:action FindInPath<CR>
+nnoremap <leader>ff m`:action GotoFile<CR>
 nnoremap <leader>e :NERDTreeFocus<CR>
 
 " Code completion
 inoremap <C-y> :action EditorChooseLookupItem<CR>
 
 " Goto
-nnoremap gr :action ShowUsages<CR>
-nnoremap gi :action ReSharperGotoImplementation<CR>
-nnoremap gD :action GotToDeclaration<CR>
-nnoremap gt :action GotoTest<CR>
-nnoremap gd :action GotoTypeDeclaration<CR>
+nnoremap gr m`:action ShowUsages<CR>
+nnoremap gi m`:action ReSharperGotoImplementation<CR>
+nnoremap gD m`:action GotToDeclaration<CR>
+nnoremap gt m`:action GotoTest<CR>
+nnoremap gd m`:action GotoTypeDeclaration<CR>
 nnoremap [g :action GotoPreviousError<CR>
 nnoremap ]g :action GotoNextError<CR>
 

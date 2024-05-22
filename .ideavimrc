@@ -1,4 +1,5 @@
 set nu
+set nu
 set relativenumber
 set incsearch
 set scrolloff=8
@@ -61,21 +62,103 @@ nnoremap <C-k> :action QuickJavaDoc<CR>
 " Navigation
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <leader>fr :action RecentFiles<CR>
-nnoremap <leader>fg :action GotoFile<CR>
-nnoremap <leader>fi :action FindInPath<CR>
-nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fr m`:action RecentFiles<CR>
+nnoremap <leader>fg m`:action GotoFile<CR>
+nnoremap <leader>fi m`:action FindInPath<CR>
+nnoremap <leader>ff m`:action GotoFile<CR>
 nnoremap <leader>e :NERDTreeFocus<CR>
 
 " Code completion
 inoremap <C-y> :action EditorChooseLookupItem<CR>
 
 " Goto
-nnoremap gr :action ShowUsages<CR>
-nnoremap gi :action ReSharperGotoImplementation<CR>
-nnoremap gD :action GotToDeclaration<CR>
-nnoremap gt :action GotoTest<CR>
-nnoremap gd :action GotoTypeDeclaration<CR>
+nnoremap gr m`:action ShowUsages<CR>
+nnoremap gi m`:action ReSharperGotoImplementation<CR>
+nnoremap gD m`:action GotToDeclaration<CR>
+nnoremap gt m`:action GotoTest<CR>
+nnoremap gd m`:action GotoTypeDeclaration<CR>
+nnoremap [g :action GotoPreviousError<CR>
+nnoremap ]g :action GotoNextError<CR>
+
+" Debugger
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
+set relativenumber
+set incsearch
+set scrolloff=8
+
+" Plugins
+Plug 'preservim/nerdtree'
+Plug 'machakann/vim-highlightedyank'
+
+" Leader
+let mapleader = " "
+noremap <Space> <Nop>
+
+" Tabbing
+nnoremap <S-l> gt
+vnoremap <S-l> gt
+nnoremap <S-h> gT
+vnoremap <S-h> gT
+
+" Clipboard buffer
+nnoremap x "*x
+nnoremap X "*xx
+nnoremap d "*d
+nnoremap D "*dd
+nnoremap y "*y
+nnoremap Y "*yy
+nnoremap p "*p
+nnoremap P "*P
+vnoremap x "*x
+vnoremap X "*xx
+vnoremap d "*d
+vnoremap D "*dd
+vnoremap y "*y
+vnoremap Y "*yy
+vnoremap p "*p
+vnoremap P "*P
+
+" Terminal
+nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
+
+" Quality of life
+nnoremap <leader>s "ayiw :%s/\<<C-r>a\>/<C-r>a/gI<Left><Left><Left>
+nnoremap <leader>r :action RenameElement<CR>
+nnoremap <leader>= :action ReformatCode<CR>
+nnoremap <leader>q :wq<CR>
+nnoremap <leader>Q :tabo<CR>
+nnoremap <C-d> <C-d>zz
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzz
+nnoremap N Nzz
+
+" Commenting
+nnoremap gc :action CommentByLineComment<CR>
+vnoremap gc :action CommentByLineComment<CR>
+
+" Documentation
+nnoremap <C-k> :action QuickJavaDoc<CR>
+
+" Navigation
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <leader>fr m`:action RecentFiles<CR>
+nnoremap <leader>fg m`:action GotoFile<CR>
+nnoremap <leader>fi m`:action FindInPath<CR>
+nnoremap <leader>ff m`:action GotoFile<CR>
+nnoremap <leader>e :NERDTreeFocus<CR>
+
+" Code completion
+inoremap <C-y> :action EditorChooseLookupItem<CR>
+
+" Goto
+nnoremap gr m`:action ShowUsages<CR>
+nnoremap gi m`:action ReSharperGotoImplementation<CR>
+nnoremap gD m`:action GotToDeclaration<CR>
+nnoremap gt m`:action GotoTest<CR>
+nnoremap gd m`:action GotoTypeDeclaration<CR>
 nnoremap [g :action GotoPreviousError<CR>
 nnoremap ]g :action GotoNextError<CR>
 
