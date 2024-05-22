@@ -1,3 +1,6 @@
+# Vim Rider Configuration
+
+```vim
 set nu
 set relativenumber
 set incsearch
